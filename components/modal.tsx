@@ -16,9 +16,9 @@ const Modal = () => {
 					)}
 					{modal.heading === "Warning" && <AiOutlineWarning size={40} color="orange" />}
 					{modal.heading === "Error" && <BiErrorAlt size={40} color="red" />}
-					<h1>{modal.heading}</h1>
+					<h1 className="text-white">{modal.heading}</h1>
 				</div>
-				<h3 className="font-primary-semibold text-xl text-white">{modal.message}</h3>
+				<h3 className="font-regular text-xl text-white">{modal.message}</h3>
 				<button
 					type="button"
 					className="primary-button mt-8 ml-auto block"

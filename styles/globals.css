@@ -66,7 +66,7 @@ html {
 		@apply font-secondary transition-colors duration-200 bg-primary hover:bg-[#3619c7] text-white shadow-xl w-fit cursor-pointer px-8 py-3 rounded border-none outline-none scale-90 md:scale-100;
 	}
 	.secondary-button {
-		@apply font-secondary transition-colors duration-200 bg-transparent hover:bg-[#3619c7] hover:text-white text-primary w-fit cursor-pointer px-8 py-3 rounded border-2 border-primary outline-none scale-90 md:scale-100;
+		@apply font-secondary transition-colors duration-200 bg-transparent hover:bg-primary hover:text-white text-primary w-fit cursor-pointer px-8 py-3 rounded border-2 border-primary outline-none scale-90 md:scale-100;
 	}
 	.disabled-button {
 		@apply font-secondary transition-colors duration-200 text-white bg-gray-600 w-fit cursor-not-allowed px-8 py-3 rounded border-none outline-none scale-90 md:scale-100;
