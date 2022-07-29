@@ -14,7 +14,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="sticky z-20 inset-0 bg-light-bg dark:bg-dark-bg shadow-md dark:shadow-slate-800 py-4 flex items-center justify-between px-4 sm:px-12">
+		<header className="sticky z-20 inset-0 bg-gradient-to-r from-gray-300 to-white sm:from-gray-300 sm:to-gray-100 dark:from-dark-bg dark:to-slate-800 dark:sm:from-dark-bg dark:sm:to-slate-700 shadow-lg dark:shadow-slate-800 py-4 flex items-center justify-between px-4 sm:px-12">
 			<nav className="hidden md:flex gap-6">
 				<Link href="/#">
 					<span className="navbar-links" onClick={handleNavToggle}>
@@ -52,20 +52,26 @@ const Header = () => {
 				onClick={() => setShowNavbar(previousVal => true)}
 				size={30}
 			/>
-			{theme === "dark" && (
-				<MdLightMode
-					size={30}
-					className="cursor-pointer text-primary"
-					onClick={() => setTheme("light")}
-				/>
-			)}
-			{theme === "light" && (
-				<MdDarkMode
-					size={30}
-					className="cursor-pointer text-primary"
-					onClick={() => setTheme("dark")}
-				/>
-			)}
+			<span>
+				{theme === "dark" && (
+					<span>
+						<MdLightMode
+							size={30}
+							className="cursor-pointer text-primary"
+							onClick={() => setTheme("light")}
+						/>
+					</span>
+				)}
+				{theme === "light" && (
+					<span>
+						<MdDarkMode
+							size={30}
+							className="cursor-pointer text-primary"
+							onClick={() => setTheme("dark")}
+						/>
+					</span>
+				)}
+			</span>
 			<nav
 				className={`md:hidden fixed z-30 left-0 top-0 bottom-0 shadow-xl dark:shadow-slate-800 bg-light-bg dark:bg-dark-bg flex gap-4 flex-col py-10 px-6 w-[15em] transition-transform origin-left ${
 					showNavbar ? "scale-x-100" : "scale-x-0"

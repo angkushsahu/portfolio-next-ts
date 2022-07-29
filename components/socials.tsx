@@ -30,7 +30,7 @@ const Socials = () => {
 				</a>
 				<span className="w-[3px] h-28 mt-2 bg-light-title dark:bg-dark-title"></span>
 			</aside>
-			<aside className="fixed z-10 bottom-0 right-0 left-0 flex sm:hidden items-center justify-center gap-6 px-3 py-3 bg-light-bg dark:bg-dark-bg shadow-2xl shadow-black">
+			<aside className="fixed z-10 bottom-0 right-0 left-0 flex sm:hidden items-center justify-center gap-6 px-3 py-3 bg-gradient-to-r from-gray-300 to-white sm:from-gray-300 sm:to-gray-100 dark:from-dark-bg dark:to-slate-800 dark:sm:from-dark-bg dark:sm:to-slate-700 shadow-2xl shadow-black">
 				<span className="h-[3px] flex-1 mt-2 bg-primary"></span>
 				<Link href="/#contact" className="bg-red-500">
 					<FiMail className="cursor-pointer text-primary" size={30} />

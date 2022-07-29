@@ -14,11 +14,11 @@ This is my portfolio which contains information about all the necessary skill se
 
 #### Dark mode
 
-![Angkush Sahu](https://res.cloudinary.com/dvhucdquc/image/upload/v1658647717/portfolio_wallpaper/dark_mode_nxdnsa.png)
+![Angkush Sahu](https://res.cloudinary.com/dvhucdquc/image/upload/v1659114421/portfolio_wallpaper/dark_gfm9ue.png)
 
 #### Light mode
 
-![Angkush Sahu](https://res.cloudinary.com/dvhucdquc/image/upload/v1658647724/portfolio_wallpaper/light_mode_j1tpgm.png)
+![Angkush Sahu](https://res.cloudinary.com/dvhucdquc/image/upload/v1659114431/portfolio_wallpaper/white_nkexbq.png)
 
 ##
 

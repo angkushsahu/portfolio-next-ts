@@ -3,7 +3,7 @@ import Meta from "../components/meta";
 
 const Contact = () => {
 	return (
-		<main className="min-h-screen flex flex-col items-center justify-center py-12 px-4 smaller:px-6 bg-light-bg dark:bg-dark-bg">
+		<main className="min-h-screen flex flex-col items-center justify-center py-12 px-4 smaller:px-6 root">
 			<Meta title="Contact - Angkush Sahu" />
 			<h1 className="text-center">Contact</h1>
 			<p className="mt-6 text-center">

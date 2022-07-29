@@ -47,6 +47,9 @@ html {
 		width: 100%;
 		height: 100%;
 	}
+	.root {
+		@apply relative after:fixed after:inset-0 after:-z-10 after:bg-gradient-to-r from-gray-300 to-gray-100 dark:after:from-dark-bg dark:after:to-slate-800 dark:sm:after:from-dark-bg dark:sm:after:to-slate-700;
+	}
 	.section {
 		@apply relative min-h-[calc(100vh-3.875em)] flex flex-col justify-center px-4 smaller:px-6 pt-16 pb-24 w-full sm:w-[84%] max-w-[79em] mx-auto after:absolute after:bottom-0 after:left-1/3 after:right-1/3 after:h-[1px] after:bg-gray-500;
 	}
@@ -63,7 +66,7 @@ html {
 		@apply max-w-[60ch] text-base sm:text-lg font-secondary text-light-description dark:text-dark-description;
 	}
 	.primary-button {
-		@apply font-secondary transition-colors duration-200 bg-primary hover:bg-[#3619c7] text-white shadow-xl w-fit cursor-pointer px-8 py-3 rounded border-none outline-none scale-90 md:scale-100;
+		@apply font-secondary transition-colors duration-200 bg-primary hover:bg-blue-900 text-white shadow-xl w-fit cursor-pointer px-8 py-3 rounded border-none outline-none scale-90 md:scale-100;
 	}
 	.secondary-button {
 		@apply font-secondary transition-colors duration-200 bg-transparent hover:bg-primary hover:text-white text-primary w-fit cursor-pointer px-8 py-3 rounded border-2 border-primary outline-none scale-90 md:scale-100;
