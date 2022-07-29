@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Education from "./education";
+import Experience from "./experience";
 
 const EduAndExp = () => {
 	const [tabs, setTabs] = useState<number>(1);
@@ -24,6 +26,10 @@ const EduAndExp = () => {
 					Education
 				</span>
 			</div>
+			<section className="mt-16">
+				{tabs === 1 && <Experience />}
+				{tabs === 2 && <Education />}
+			</section>
 		</section>
 	);
 };

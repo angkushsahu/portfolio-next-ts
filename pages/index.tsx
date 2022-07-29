@@ -8,7 +8,7 @@ const Skills = dynamic(() => import("../components/skills"), { suspense: true })
 const Projects = dynamic(() => import("../components/projects"), { suspense: true });
 const About = dynamic(() => import("../components/about"), { suspense: true });
 const Contact = dynamic(() => import("../components/contact"), { suspense: true });
-// const EduAndExp = dynamic(() => import("../components/educationAndExperience"), { suspense: true });
+const EduAndExp = dynamic(() => import("../components/educationAndExperience"), { suspense: true });
 import Loader from "../components/loader";
 import Meta from "../components/meta";
 
@@ -20,8 +20,8 @@ const Home: NextPage = () => {
 				<Socials />
 				<Header />
 				<Hero />
+				<EduAndExp />
 				<Skills />
-				{/* <EduAndExp /> */}
 				<Projects />
 				<About />
 				<Contact />

@@ -16,6 +16,7 @@ module.exports = {
 			},
 			screens: {
 				smaller: "26.25em",
+				medium: "56.25em",
 			},
 			fontFamily: {
 				"primary-bold": ["Orbitron-Bold", "Poppins", "sans-serif"],
