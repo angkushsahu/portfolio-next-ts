@@ -26,7 +26,7 @@ const Header = () => {
 						Skills
 					</span>
 				</Link>
-				<Link href="/error">
+				<Link href="/#experience">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Experience
 					</span>
@@ -92,7 +92,7 @@ const Header = () => {
 						Skills
 					</span>
 				</Link>
-				<Link href="/error">
+				<Link href="/#experience">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Experience
 					</span>
