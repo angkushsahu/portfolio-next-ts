@@ -21,14 +21,14 @@ const Header = () => {
 						Home
 					</span>
 				</Link>
-				<Link href="/#skills">
-					<span className="navbar-links" onClick={handleNavToggle}>
-						Skills
-					</span>
-				</Link>
 				<Link href="/#experience">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Experience
+					</span>
+				</Link>
+				<Link href="/#skills">
+					<span className="navbar-links" onClick={handleNavToggle}>
+						Skills
 					</span>
 				</Link>
 				<Link href="/#projects">
@@ -87,14 +87,14 @@ const Header = () => {
 						Home
 					</span>
 				</Link>
-				<Link href="/#skills">
-					<span className="mobile-navbar-links" onClick={handleNavToggle}>
-						Skills
-					</span>
-				</Link>
 				<Link href="/#experience">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Experience
+					</span>
+				</Link>
+				<Link href="/#skills">
+					<span className="mobile-navbar-links" onClick={handleNavToggle}>
+						Skills
 					</span>
 				</Link>
 				<Link href="/#projects">

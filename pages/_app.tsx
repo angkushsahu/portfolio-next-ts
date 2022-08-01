@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<>
-			<ThemeProvider attribute="class">
+			<ThemeProvider defaultTheme="dark" attribute="class">
 				<Context.Provider value={{ loading, modal, setLoading, setModal }}>
 					{loading && <Loader />}
 					{modal.open && modal.message && <Modal />}
