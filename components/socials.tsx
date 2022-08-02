@@ -19,7 +19,7 @@ const Socials = () => {
 					/>
 				</a>
 				<a
-					href="hthttps://linkedin.com/in/angkush-sahu-0409311bb"
+					href="https://linkedin.com/in/angkush-sahu-0409311bb"
 					rel="noopener noreferrer"
 					target="_blank"
 				>
@@ -39,7 +39,7 @@ const Socials = () => {
 					<VscGithub className="cursor-pointer text-primary" size={30} />
 				</a>
 				<a
-					href="hthttps://linkedin.com/in/angkush-sahu-0409311bb"
+					href="https://linkedin.com/in/angkush-sahu-0409311bb"
 					rel="noopener noreferrer"
 					target="_blank"
 				>
