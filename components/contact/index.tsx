@@ -8,7 +8,7 @@ const Contact = () => {
 				Feel free to contact me if you want to hire me, have a project in mind, or just for
 				a casual chat.
 			</p>
-			<p className="mb-20 mt-3">I would love to hear from you.</p>
+			<p className="mb-6 md:mb-12 mt-3">I would love to hear from you.</p>
 			<Form />
 		</section>
 	);

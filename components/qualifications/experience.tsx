@@ -1,4 +1,4 @@
-import { experienceMap } from "./eduExpTypes";
+import { experienceMap } from "./data";
 
 const Experience = () => {
 	return (

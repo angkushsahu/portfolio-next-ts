@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AiOutlineWarning } from "react-icons/ai";
 import { MdOutlineDoneOutline } from "react-icons/md";
 import { BiErrorAlt } from "react-icons/bi";
-import Context from "../state";
+import Context from "../../state";
 
 const Modal = () => {
 	const { modal, setModal } = useContext(Context);

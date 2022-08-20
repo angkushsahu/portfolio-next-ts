@@ -1,11 +1,6 @@
-export interface EduExpType {
-	title: string;
-	role: string;
-	description: string;
-	time: string;
-}
+import { IQualifications } from "../../types";
 
-export const educationMap: EduExpType[] = [
+export const educationMap: IQualifications[] = [
 	{
 		title: "Jorhat Engineering College",
 		role: "Mechanical Engineering",
@@ -21,7 +16,7 @@ export const educationMap: EduExpType[] = [
 	},
 ];
 
-export const experienceMap: EduExpType[] = [
+export const experienceMap: IQualifications[] = [
 	{
 		title: "Feetwings",
 		role: "Full - stack developer",

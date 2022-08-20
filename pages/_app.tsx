@@ -4,8 +4,8 @@ import { Router } from "next/router";
 import { ThemeProvider } from "next-themes";
 import { useState } from "react";
 import Context, { ModalType } from "../state";
-import Loader from "../components/loader";
-import Modal from "../components/modal";
+import Loader from "../components/popups/loader";
+import Modal from "../components/popups/modal";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [loading, setLoading] = useState<boolean>(false);

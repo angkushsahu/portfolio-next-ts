@@ -14,22 +14,31 @@ const Hero = () => {
 					target="_blank"
 					className="primary-button w-40 flex items-center justify-center mt-6"
 					download
+					aria-label="resume"
+					title="resume"
 				>
 					Resume
 				</a>
-				<Link href="/#projects">
+				<Link href="/#projects" aria-label="projects" title="projects">
 					<span className="secondary-button mt-2 md:hidden w-40 flex items-center justify-center">
 						Projects
 					</span>
 				</Link>
-				<Link href="/#contact">
+				<Link href="/#contact" aria-label="contact" title="contact">
 					<span className="secondary-button mt-2 md:hidden w-40 flex items-center justify-center">
 						Contact
 					</span>
 				</Link>
 			</section>
 			<section className="flex-1 flex items-center justify-center">
-				<Image src="/images/programming.png" alt="programming" width="300" height="300" />
+				<Image
+					src="/images/programming.png"
+					alt="programming"
+					width="300"
+					height="300"
+					placeholder="blur"
+					blurDataURL="/images/programming.png"
+				/>
 			</section>
 		</section>
 	);

@@ -1,8 +1,8 @@
-import { SkillDivisionTypes } from "./skillDivTypes";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { TbBrandNextjs } from "react-icons/tb";
+import { ISkillComponentProps } from "../../types";
 
-const Others = ({ currentDiv, setCurrentDiv, idx }: SkillDivisionTypes) => {
+const Others = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
 	const handleAccordion = () => {
 		currentDiv === idx
 			? setCurrentDiv(previousValue => 0)

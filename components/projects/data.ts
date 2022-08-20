@@ -1,12 +1,6 @@
-export interface ProjectType {
-	title: string;
-	description: string;
-	link: string;
-	frameworks: string[];
-	image: string;
-}
+import { IProject } from "../../types";
 
-export const projects: ProjectType[] = [
+export const projects: IProject[] = [
 	{
 		title: "CHAT-NATION",
 		description:

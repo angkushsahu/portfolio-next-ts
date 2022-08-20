@@ -1,6 +1,6 @@
-import { projects } from "./projectType";
+import { projects } from "./data";
 
-const ProjectList = () => {
+const Project = () => {
 	return (
 		<div className="flex flex-col gap-24">
 			{projects.map((project, idx) => (
@@ -63,4 +63,4 @@ const ProjectList = () => {
 	);
 };
 
-export default ProjectList;
+export default Project;

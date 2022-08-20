@@ -16,32 +16,32 @@ const Header = () => {
 	return (
 		<header className="sticky z-20 inset-0 bg-gradient-to-r from-gray-300 to-white sm:from-gray-300 sm:to-gray-100 dark:from-dark-bg dark:to-slate-800 dark:sm:from-dark-bg dark:sm:to-slate-700 shadow-lg dark:shadow-slate-800 py-4 flex items-center justify-between px-4 sm:px-12">
 			<nav className="hidden md:flex gap-6">
-				<Link href="/#">
+				<Link href="/#" aria-label="home" title="home">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Home
 					</span>
 				</Link>
-				<Link href="/#experience">
+				<Link href="/#experience" aria-label="experience" title="experience">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Experience
 					</span>
 				</Link>
-				<Link href="/#skills">
+				<Link href="/#skills" aria-label="skills" title="skills">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Skills
 					</span>
 				</Link>
-				<Link href="/#projects">
+				<Link href="/#projects" aria-label="projects" title="projects">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Projects
 					</span>
 				</Link>
-				<Link href="/#about">
+				<Link href="/#about" aria-label="about" title="about">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						About
 					</span>
 				</Link>
-				<Link href="/#contact">
+				<Link href="/#contact" aria-label="contact" title="contact">
 					<span className="navbar-links" onClick={handleNavToggle}>
 						Contact
 					</span>
@@ -82,32 +82,32 @@ const Header = () => {
 					onClick={() => setShowNavbar(previousVal => false)}
 					size={30}
 				/>
-				<Link href="/#">
+				<Link href="/#" aria-label="home" title="home">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Home
 					</span>
 				</Link>
-				<Link href="/#experience">
+				<Link href="/#experience" aria-label="experience" title="experience">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Experience
 					</span>
 				</Link>
-				<Link href="/#skills">
+				<Link href="/#skills" aria-label="skills" title="skills">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Skills
 					</span>
 				</Link>
-				<Link href="/#projects">
+				<Link href="/#projects" aria-label="projects" title="projects">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Projects
 					</span>
 				</Link>
-				<Link href="/#about">
+				<Link href="/#about" aria-label="about" title="about">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						About
 					</span>
 				</Link>
-				<Link href="/#contact">
+				<Link href="/#contact" aria-label="contact" title="contact">
 					<span className="mobile-navbar-links" onClick={handleNavToggle}>
 						Contact
 					</span>

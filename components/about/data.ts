@@ -1,9 +1,6 @@
-export interface AboutType {
-	title: string;
-	description: string;
-}
+import { IAboutData } from "../../types";
 
-export const aboutList: AboutType[] = [
+export const aboutList: IAboutData[] = [
 	{
 		title: "Current Goal",
 		description:

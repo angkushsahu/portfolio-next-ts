@@ -1,8 +1,8 @@
-import { SkillDivisionTypes } from "./skillDivTypes";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { SiExpress, SiMongodb, SiNodedotjs } from "react-icons/si";
+import { ISkillComponentProps } from "../../types";
 
-const Backend = ({ currentDiv, setCurrentDiv, idx }: SkillDivisionTypes) => {
+const Backend = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
 	const handleAccordion = () => {
 		currentDiv === idx
 			? setCurrentDiv(previousValue => 0)

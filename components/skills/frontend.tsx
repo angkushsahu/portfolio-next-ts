@@ -1,8 +1,8 @@
-import { SkillDivisionTypes } from "./skillDivTypes";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { SiReact, SiMaterialui, SiTailwindcss, SiSass } from "react-icons/si";
+import { ISkillComponentProps } from "../../types";
 
-const Frontend = ({ currentDiv, setCurrentDiv, idx }: SkillDivisionTypes) => {
+const Frontend = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
 	const handleAccordion = () => {
 		currentDiv === idx
 			? setCurrentDiv(previousValue => 0)

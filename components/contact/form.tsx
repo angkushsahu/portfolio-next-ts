@@ -2,19 +2,13 @@ import { ChangeEvent, FormEvent, MutableRefObject, useContext, useRef, useState 
 import { sendForm } from "@emailjs/browser";
 import Context from "../../state";
 import validateEmail from "../../utils/validateEmail";
-
-interface ValueType {
-	name: string;
-	email: string;
-	subject: string;
-	message: string;
-}
+import { IContactValues } from "../../types";
 
 const Form = () => {
 	const { setModal, setLoading } = useContext(Context);
 	const formRef: MutableRefObject<HTMLFormElement> =
 		useRef<HTMLFormElement>() as MutableRefObject<HTMLFormElement>;
-	const [values, setValues] = useState<ValueType>({
+	const [values, setValues] = useState<IContactValues>({
 		name: "",
 		email: "",
 		subject: "",

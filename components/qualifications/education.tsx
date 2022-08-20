@@ -1,4 +1,4 @@
-import { educationMap } from "./eduExpTypes";
+import { educationMap } from "./data";
 
 const Education = () => {
 	return (

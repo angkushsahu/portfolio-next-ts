@@ -1,4 +1,4 @@
-import { aboutList } from "./aboutType";
+import { aboutList } from "./data";
 
 const About = () => {
 	return (

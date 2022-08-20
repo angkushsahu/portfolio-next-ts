@@ -1,4 +1,4 @@
-import ProjectList from "./projectList";
+import Project from "./project";
 
 const Projects = () => {
 	return (
@@ -6,7 +6,7 @@ const Projects = () => {
 			<h1>Projects</h1>
 			<p className="mt-6">Most of the projects I create are just for fun.</p>
 			<p className="mt-1 mb-20">Here are some of the projects I am confident about.</p>
-			<ProjectList />
+			<Project />
 		</section>
 	);
 };
