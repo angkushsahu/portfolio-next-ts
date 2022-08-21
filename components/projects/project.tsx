@@ -1,63 +1,63 @@
+import Image from "next/image";
 import { projects } from "./data";
 
 const Project = () => {
 	return (
-		<div className="flex flex-col gap-24">
+		<div className="flex flex-wrap gap-10 items-center justify-center">
 			{projects.map((project, idx) => (
-				<article
+				<div
+					className="flex flex-col gap-24 bg-gray-300/70 dark:bg-slate-900/40 px-4 py-5 sm:px-8 sm:py-8 rounded max-w-lg shadow-lg"
 					key={idx}
-					className="flex flex-col lg:flex-row group lg:items-center justify-center gap-12"
 				>
-					<h2 className="lg:hidden">{project.title}</h2>
-					{project.image ? (
-						<img
+					<article>
+						<Image
 							src={project.image}
 							alt={project.title}
-							className="w-full max-w-sm max-h-96 shadow-xl group-even:lg:order-1"
+							width="512"
+							height="255"
+							placeholder="blur"
+							blurDataURL="/images/programming.png"
+							className="rounded shadow-lg"
 						/>
-					) : (
-						<div className="w-full max-w-sm h-[14em] shadow-xl group-even:order-1 flex items-center justify-center bg-gray-600">
-							<h2>Image unavailable</h2>
-						</div>
-					)}
-					<div className="group-odd:lg:text-right group-even:text-left flex gap-4 flex-col justify-center">
-						<h2 className="hidden lg:block">{project.title}</h2>
-						<p className="max-w-[45ch] group-odd:lg:ml-auto group-even:mr-auto mb-2">
-							{project.description}
-						</p>
-						<h3 className="text-lg sm:text-xl font-primary-semibold text-light-subtitle dark:text-dark-subtitle">
-							Frameworks used
+						<h2 className="mt-5 sm:mt-8">{project.title}</h2>
+						<p className="max-w-[45ch] my-4">{project.description}</p>
+						<h3 className="text-lg sm:text-xl font-primary-semibold text-light-subtitle dark:text-dark-subtitle mb-2">
+							Frameworks
 						</h3>
-						<ul className="flex items-center group-odd:lg:justify-end group-even:justify-start gap-x-8 gap-y-2 flex-wrap">
+						<div className="flex flex-wrap gap-x-6 gap-y-0">
 							{project.frameworks.map((framework, idx) => (
-								<li
-									key={idx}
+								<span
 									className="text-light-description dark:text-dark-description"
+									key={idx}
 								>
 									{framework}
-								</li>
+								</span>
 							))}
-						</ul>
-						{project.link ? (
+						</div>
+						<div className="flex flex-wrap justify-between mt-8">
 							<a
 								href={project.link}
 								rel="noopener noreferrer"
 								target="_blank"
-								className="primary-button mt-4 group-odd:lg:ml-auto group-even:mr-auto scale-90"
+								aria-label={project.title}
+								title={project.title}
+								className="primary-button py-2"
 							>
-								Visit website
+								Go Live
 							</a>
-						) : (
-							<button
-								type="button"
-								className="disabled-button mt-4 group-odd:lg:ml-auto group-even:mr-auto scale-90"
-								disabled={true}
+							<a
+								href={project.github}
+								rel="noopener noreferrer"
+								target="_blank"
+								aria-label={project.title}
+								title={project.title}
+								className="secondary-button py-2"
 							>
-								On Progress
-							</button>
-						)}
-					</div>
-				</article>
+								Github
+							</a>
+						</div>
+					</article>
+				</div>
 			))}
 		</div>
 	);

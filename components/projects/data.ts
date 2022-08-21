@@ -2,28 +2,48 @@ import { IProject } from "../../types";
 
 export const projects: IProject[] = [
 	{
-		title: "CHAT-NATION",
-		description:
-			"Now stay connected to your loved ones with this real-time messaging application. This website offers fast message delivery and response. Add people to your friend list and stay connected with them.",
-		image: "",
-		link: "",
-		frameworks: [
-			"React",
-			"Tailwind",
-			"Node",
-			"Express",
-			"Socket.io",
-			"Socket.io-client",
-			"Mongo-DB",
-		],
-	},
-	{
 		title: "PACIFIO",
 		description:
 			"An online store where you can browse several products available. After successful login, the user can purchase any product without any hassle. The payment method is secure with Stripe.",
 		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1648674128/ProjectsHomeImages/Screenshot_228_tk9cf1.png",
-		link: "",
-		frameworks: ["React", "Tailwind", "Redux", "Node", "Express", "Stripe", "Mongo-DB"],
+		link: "https://pacifio.herokuapp.com/",
+		frameworks: ["React", "Redux-Toolkit", "Tailwind", "Node", "Express", "Stripe", "Mongo-DB"],
+		github: "https://angkush.vercel.app/not-ready-yet",
+	},
+	{
+		title: "BLOGGERSBAY",
+		description:
+			"An online platform where you can create blogs for free without any hassle. Signup and set up your account to start your blogging journey right away.",
+		image: "/images/error.png",
+		link: "https://bloggersbay.herokuapp.com/",
+		frameworks: [
+			"React",
+			"Redux-Toolkit",
+			"Socket-io.client",
+			"Tailwind",
+			"Node",
+			"Express",
+			"Socket-io",
+			"Mongo-DB",
+		],
+		github: "https://angkush.vercel.app/not-ready-yet",
+	},
+	{
+		title: "CHAT-NATION",
+		description:
+			"Now stay connected to your loved ones with this real-time messaging application. This website offers fast message delivery and response. Add people to your friend list and stay connected with them.",
+		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1660402110/ProjectsHomeImages/chat-nation_uzodci.png",
+		link: "https://chat-nation.herokuapp.com/",
+		frameworks: [
+			"React",
+			"Socket.io-client",
+			"Tailwind",
+			"Node",
+			"Express",
+			"Socket.io",
+			"Mongo-DB",
+		],
+		github: "https://github.com/angkushsahu/chat-nation/",
 	},
 	{
 		title: "COIN-LAND",
@@ -32,13 +52,6 @@ export const projects: IProject[] = [
 		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1658428724/ProjectsHomeImages/coin-land_qifnen.png",
 		link: "https://coin-land.netlify.app",
 		frameworks: ["React", "Tailwind", "Firebase"],
-	},
-	{
-		title: "ROBOPUNKS",
-		description:
-			"A demo NFT minting site where you can connect with Metamask and test ethers to mint NFTs. A user can mint up to 3 NFTs. This website was created for demo purposes, so nothing is amusing about this project. 😅",
-		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1648666838/ProjectsHomeImages/Screenshot_227_zehq6m.png",
-		link: "https://robopunks.netlify.app",
-		frameworks: ["React", "SASS", "Ethers", "Solidity", "Hardhat"],
+		github: "https://github.com/angkushsahu/coin-land/",
 	},
 ];

@@ -15,9 +15,10 @@ export interface IContactValues {
 export interface IProject {
 	title: string;
 	description: string;
-	link: string;
 	frameworks: string[];
 	image: string;
+	link: string;
+	github: string;
 }
 
 export interface IQualifications {

@@ -1,5 +1,5 @@
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
-import { SiReact, SiMaterialui, SiTailwindcss, SiSass } from "react-icons/si";
+import { SiReact, SiCss3, SiMaterialui, SiTailwindcss, SiSass } from "react-icons/si";
 import { ISkillComponentProps } from "../../types";
 
 const Frontend = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
@@ -27,6 +27,10 @@ const Frontend = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
 					<div className="flex flex-col items-center justify-center gap-2">
 						<SiReact size={40} className="text-blue-400" />
 						<span>React</span>
+					</div>
+					<div className="flex flex-col items-center justify-center gap-2">
+						<SiCss3 size={40} className="text-blue-400" />
+						<span>CSS</span>
 					</div>
 					<div className="flex flex-col items-center justify-center gap-2">
 						<SiSass size={40} className="text-pink-600" />

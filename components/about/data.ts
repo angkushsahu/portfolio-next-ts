@@ -14,7 +14,7 @@ export const aboutList: IAboutData[] = [
 	{
 		title: "DSA ( Data Structures and Algorithms )",
 		description:
-			"I am proficient with my DSA skills. I practice on online platforms such as Hackerrank and participate in competitions on Codechef.",
+			"I am proficient in DSA. I practice on online platforms such as Hackerrank and participate in competitions on Codechef.",
 	},
 	{
 		title: "Education",

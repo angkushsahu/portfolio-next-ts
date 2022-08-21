@@ -26,7 +26,7 @@ const Others = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
 				<div className="bg-transparent border-2 border-primary flex gap-x-8 gap-y-3 flex-wrap items-center justify-center p-6">
 					<div className="flex flex-col items-center justify-center gap-2">
 						<TbBrandNextjs size={40} className="text-black dark:text-white" />
-						<span>Next</span>
+						<span>Next JS</span>
 					</div>
 				</div>
 			)}

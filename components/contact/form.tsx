@@ -1,13 +1,12 @@
-import { ChangeEvent, FormEvent, MutableRefObject, useContext, useRef, useState } from "react";
-import { sendForm } from "@emailjs/browser";
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import Context from "../../state";
 import validateEmail from "../../utils/validateEmail";
 import { IContactValues } from "../../types";
 
 const Form = () => {
+	const [state, handleSubmit] = useForm(String(process.env.FORMSPREE_ID));
 	const { setModal, setLoading } = useContext(Context);
-	const formRef: MutableRefObject<HTMLFormElement> =
-		useRef<HTMLFormElement>() as MutableRefObject<HTMLFormElement>;
 	const [values, setValues] = useState<IContactValues>({
 		name: "",
 		email: "",
@@ -15,8 +14,9 @@ const Form = () => {
 		message: "",
 	});
 
-	const formSubmit = (e: FormEvent) => {
+	const formSubmit = async (e: FormEvent) => {
 		e.preventDefault();
+		console.log("This is awesome");
 
 		if (!values.name || !values.email || !values.message) {
 			setModal({ open: true, heading: "Warning", message: "Please validate all the fields" });
@@ -28,33 +28,28 @@ const Form = () => {
 			return;
 		}
 
-		setLoading(true);
-		sendForm(
-			String(process.env.SERVICE_ID),
-			String(process.env.TEMPLATE_ID),
-			formRef?.current,
-			String(process.env.PUBLIC_KEY),
-		)
-			.then(() => {
-				setLoading(false);
-				setModal({
-					open: true,
-					heading: "Success",
-					message:
-						"Thanks for reaching out to me, I'll get back to you as soon as possible",
-				});
+		try {
+			setLoading(true);
+			const result = await handleSubmit(e);
+			if (result.response?.status === 200) {
 				setValues(previousValues => {
 					return { name: "", email: "", subject: "", message: "" };
 				});
-			})
-			.catch((err: any) => {
-				setLoading(false);
-				setModal({
-					open: true,
-					heading: "Error",
-					message: "Unable to send e-mail, please try again",
-				});
+			}
+			setLoading(false);
+			setModal({
+				open: true,
+				heading: "Success",
+				message: "Thanks for reaching out to me, I'll get back to you as soon as possible",
 			});
+		} catch (err: any) {
+			setLoading(false);
+			setModal({
+				open: true,
+				heading: "Error",
+				message: "Unable to send e-mail, please try again",
+			});
+		}
 	};
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -63,55 +58,64 @@ const Form = () => {
 		});
 	};
 
-	const inputClass: string = `px-4 py-2 rounded text-base font-secondary border-none outline-none w-full bg-slate-50 dark:bg-gray-700 shadow-md`;
-
 	return (
 		<form
-			ref={formRef}
 			onSubmit={formSubmit}
-			className="flex flex-col gap-8 max-w-2xl w-full mx-auto mt-12"
+			className="flex flex-col gap-6 sm:gap-8 max-w-2xl w-full mx-auto mt-12"
 		>
-			<div className="flex items-center justify-center flex-col md:flex-row gap-8">
-				<input
-					name="name"
-					id="name"
-					type="text"
-					placeholder="Name"
-					value={values.name}
-					onChange={handleInputChange}
-					className={inputClass}
-					required
-				/>
-				<input
-					name="email"
-					id="email"
-					type="email"
-					placeholder="E-mail"
-					value={values.email}
-					onChange={handleInputChange}
-					className={inputClass}
-					required
-				/>
+			<div className="flex items-center justify-center flex-col md:flex-row gap-6 sm:gap-8">
+				<div className="input_container">
+					<label htmlFor="name">Enter your name</label>
+					<input
+						name="name"
+						id="name"
+						type="text"
+						placeholder="Name"
+						value={values.name}
+						onChange={handleInputChange}
+						required
+					/>
+					<ValidationError prefix="Name" field="name" errors={state.errors} />
+				</div>
+				<div className="input_container">
+					<label htmlFor="email">Enter your e-mail</label>
+					<input
+						name="email"
+						id="email"
+						type="email"
+						placeholder="E-mail"
+						value={values.email}
+						onChange={handleInputChange}
+						required
+					/>
+					<ValidationError prefix="Email" field="email" errors={state.errors} />
+				</div>
 			</div>
-			<input
-				name="subject"
-				id="subject"
-				type="text"
-				placeholder="Subject"
-				value={values.subject}
-				onChange={handleInputChange}
-				className={inputClass}
-				required
-			/>
-			<textarea
-				name="message"
-				id="message"
-				placeholder="Message"
-				value={values.message}
-				onChange={handleInputChange}
-				className={`resize-none h-32 ${inputClass}`}
-				required
-			></textarea>
+			<div className="input_container">
+				<label htmlFor="subject">Enter subject</label>
+				<input
+					name="subject"
+					id="subject"
+					type="text"
+					placeholder="Subject"
+					value={values.subject}
+					onChange={handleInputChange}
+					required
+				/>
+				<ValidationError prefix="Subject" field="subject" errors={state.errors} />
+			</div>
+			<div className="input_container">
+				<label htmlFor="message">Enter your message for me</label>
+				<textarea
+					name="message"
+					id="message"
+					placeholder="Message"
+					value={values.message}
+					onChange={handleInputChange}
+					required
+				></textarea>
+				<ValidationError prefix="Message" field="message" errors={state.errors} />
+			</div>
 			<button type="submit" className="primary-button px-20 ml-auto">
 				Send
 			</button>

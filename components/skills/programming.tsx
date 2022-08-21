@@ -1,5 +1,5 @@
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
-import { SiTypescript, SiCplusplus } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiCplusplus } from "react-icons/si";
 import { ISkillComponentProps } from "../../types";
 
 const Programming = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) => {
@@ -25,7 +25,11 @@ const Programming = ({ currentDiv, setCurrentDiv, idx }: ISkillComponentProps) =
 			{currentDiv === idx && (
 				<div className="bg-transparent border-2 border-primary flex gap-x-8 gap-y-3 flex-wrap items-center justify-center p-6">
 					<div className="flex flex-col items-center justify-center gap-2">
-						<SiTypescript size={40} className="text-blue-800" />
+						<SiJavascript size={40} className="text-yellow-300" />
+						<span>Javascript</span>
+					</div>
+					<div className="flex flex-col items-center justify-center gap-2">
+						<SiTypescript size={40} className="text-blue-700" />
 						<span>Typescript</span>
 					</div>
 					<div className="flex flex-col items-center justify-center gap-2">

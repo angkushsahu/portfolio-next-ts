@@ -68,6 +68,19 @@ html {
 	.description {
 		@apply max-w-[60ch] text-base sm:text-lg font-secondary text-light-description dark:text-dark-description;
 	}
+	.input_container {
+		@apply relative w-full bg-slate-50 dark:bg-gray-700 shadow-md rounded pb-2 px-4;
+	}
+	.input_container > label {
+		@apply pt-2 w-full block text-sm text-gray-600 dark:text-gray-300;
+	}
+	.input_container > input,
+	.input_container > textarea {
+		@apply w-full bg-transparent outline-none border-none text-base font-secondary mt-2 resize-none;
+	}
+	.input_container > textarea {
+		@apply h-32;
+	}
 	.primary-button {
 		@apply font-secondary transition-colors duration-200 bg-primary hover:bg-blue-900 text-white shadow-xl w-fit cursor-pointer px-8 py-3 rounded border-none outline-none scale-90 md:scale-100;
 	}
