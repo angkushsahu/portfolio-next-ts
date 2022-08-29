@@ -5,7 +5,7 @@ export const projects: IProject[] = [
 		title: "PACIFIO",
 		description:
 			"An online store where you can browse several products available. After successful login, the user can purchase any product without any hassle. The payment method is secure with Stripe.",
-		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1648674128/ProjectsHomeImages/Screenshot_228_tk9cf1.png",
+		image: "https://res.cloudinary.com/dvhucdquc/image/upload/v1661511875/ProjectsHomeImages/pacifio_yraiko.png",
 		link: "https://pacifio.herokuapp.com/",
 		frameworks: ["React", "Redux-Toolkit", "Tailwind", "Node", "Express", "Stripe", "Mongo-DB"],
 		github: "https://angkush.vercel.app/not-ready-yet",
